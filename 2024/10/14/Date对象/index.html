@@ -19,25 +19,23 @@
   <meta name="author" content="Chuan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Webpack 通过将模块代码放到一个函数内执行，利用函数作用域解决了模块之间变量污染的问题；并且为了不影响全局，整个运行过程是在一个立即执行函数内完成。 Vite比Webpack启动快的原因是，不需要编译直接启动；Webpack是基于nodejs构建，Vite是基于esbuild进行预构建依赖，esbuild是采用Go语言编写。">
+    <meta name="description" content="每个网页和新闻都离不开时间，但是当人们在网络上阅读消息时往往对时间概念是模糊的； 需要注意，不管你如何实例化一个 Date 对象，js在本地存储时，都会将它转换成本地时区。js 不会帮你存储实例化该日期时的时区信息。 It’s important to keep in mind that the date and time is stored in the local time zone, and">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端开发回顾">
-<meta property="og:url" content="http://blog.xhashao.top/2024/10/12/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9E%E9%A1%BE/index.html">
+<meta property="og:title" content="Date对象">
+<meta property="og:url" content="http://blog.xhashao.top/2024/10/14/Date%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="让子单飞">
-<meta property="og:description" content="Webpack 通过将模块代码放到一个函数内执行，利用函数作用域解决了模块之间变量污染的问题；并且为了不影响全局，整个运行过程是在一个立即执行函数内完成。 Vite比Webpack启动快的原因是，不需要编译直接启动；Webpack是基于nodejs构建，Vite是基于esbuild进行预构建依赖，esbuild是采用Go语言编写。">
+<meta property="og:description" content="每个网页和新闻都离不开时间，但是当人们在网络上阅读消息时往往对时间概念是模糊的； 需要注意，不管你如何实例化一个 Date 对象，js在本地存储时，都会将它转换成本地时区。js 不会帮你存储实例化该日期时的时区信息。 It’s important to keep in mind that the date and time is stored in the local time zone, and">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.xhashao.top/blog/logo-javascript.svg">
-<meta property="article:published_time" content="2024-10-12T06:07:58.000Z">
-<meta property="article:modified_time" content="2024-10-12T09:58:30.750Z">
+<meta property="article:published_time" content="2024-10-14T05:53:34.000Z">
+<meta property="article:modified_time" content="2024-10-14T07:08:27.194Z">
 <meta property="article:author" content="Chuan">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.xhashao.top/blog/logo-javascript.svg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>前端开发回顾 - 让子单飞</title>
+  <title>Date对象 - 让子单飞</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="前端开发回顾"></span>
+            <span id="subtitle" data-typed-text="Date对象"></span>
           
         </div>
 
@@ -214,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-12 14:07" pubdate>
-          2024年10月12日 下午
+        <time datetime="2024-10-14 13:53" pubdate>
+          2024年10月14日 下午
         </time>
       </span>
     
@@ -226,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          109 字
+          139 字
         
       </span>
     
@@ -237,7 +235,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -274,13 +272,16 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">前端开发回顾</h1>
+            <h1 id="seo-header">Date对象</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Webpack 通过将模块代码放到一个函数内执行，利用函数作用域解决了模块之间变量污染的问题；<br>并且为了不影响全局，整个运行过程是在一个立即执行函数内完成。</p>
-<p>Vite比Webpack启动快的原因是，不需要编译直接启动；Webpack是基于nodejs构建，Vite是基于esbuild进行预构建依赖，esbuild是采用Go语言编写。</p>
+                <p>每个网页和新闻都离不开时间，但是当人们在网络上阅读消息时往往对时间概念是模糊的；</p>
+<p>需要注意，不管你如何实例化一个 Date 对象，js在本地存储时，都会将它转换成本地时区。js 不会帮你存储实例化该日期时的时区信息。</p>
+<p>It’s important to keep in mind that the date and time is stored in the local time zone, and that the basic methods to fetch the date and time or its components all work in the local time zone as well.</p>
+<p>new Date(‘June 15, 2019 23:15:30 GMT+10:00’)；</p>
+<p>&#x2F;&#x2F; 东10区的时间，实例化成功后，日期被转换成了本地时区<br>&#x2F;&#x2F; Sat Jun 15 2019 21:15:30 GMT+0800 (中国标准时间)</p>
 
                 
               </div>
@@ -298,8 +299,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>前端开发回顾</div>
-      <div>http://blog.xhashao.top/2024/10/12/前端开发回顾/</div>
+      <div>Date对象</div>
+      <div>http://blog.xhashao.top/2024/10/14/Date对象/</div>
     </div>
     <div class="license-meta">
       
@@ -311,7 +312,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月12日</div>
+          <div>2024年10月14日</div>
         </div>
       
       
@@ -343,9 +344,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/10/14/Date%E5%AF%B9%E8%B1%A1/" title="Date对象">
+                      <a href="/2024/10/15/%E6%97%B6%E5%8C%BA%E7%BB%86%E8%8A%82%E9%97%AE%E9%A2%98/" title="时区细节问题">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Date对象</span>
+                        <span class="hidden-mobile">时区细节问题</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -353,8 +354,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/10/11/Redis%E5%9B%9E%E9%A1%BE/" title="Redis回顾">
-                        <span class="hidden-mobile">Redis回顾</span>
+                      <a href="/2024/10/12/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9E%E9%A1%BE/" title="前端开发回顾">
+                        <span class="hidden-mobile">前端开发回顾</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -4,12 +4,31 @@
   
   
   <entry>
+    <title>开源许可协议对比MIT和ISC</title>
+    <link href="/2024/10/25/%E5%BC%80%E6%BA%90%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AE%E5%AF%B9%E6%AF%94MIT%E5%92%8CISC/"/>
+    <url>/2024/10/25/%E5%BC%80%E6%BA%90%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AE%E5%AF%B9%E6%AF%94MIT%E5%92%8CISC/</url>
+    
+    <content type="html"><![CDATA[<h1 id="开源许可协议对比"><a href="#开源许可协议对比" class="headerlink" title="开源许可协议对比"></a>开源许可协议对比</h1><img src="https://img.xfiled.one/blog/gnu.svg" width="300px"><table><thead><tr><th align="center">许可名称</th><th>权利</th><th>发起组织</th><th>义务或要求</th><th>典型软件</th></tr></thead><tbody><tr><td align="center">MIT</td><td>无限制的使用、复制、修改和发布权限</td><td>麻省理工</td><td>在软件和软件的所有副本中都必须包含以上著作权声明和本许可声明</td><td>React.js, Node.js</td></tr><tr><td align="center">ISC</td><td>和BSD 2-Clause一样，任何人可以免费地获取、使用、复制、修改和分发该项目的源代码</td><td>Internet Systems Consortium</td><td>伴随每个副本一份本许可声明，在分发时保留原始的许可声明，并且不对用户提供任何担保，也不承担因使用软件产生的责任。</td><td>NPM&#x2F;react-timer-hook</td></tr><tr><td align="center">BSD 2-Clause</td><td>允许重复使用代码，需在源代码和二进制分发中保留版权声明</td><td>Berkeley</td><td></td><td>OpenBSD</td></tr><tr><td align="center">BSD 3-Clause</td><td>类似 BSD 2-Clause</td><td>Berkeley</td><td>需在产品销售时提供相关文档，不授予商标权利</td><td>LLVM编译器</td></tr><tr><td align="center">Apache-2.0</td><td>要求保留版权和许可声明。贡献者明确授予专利权。许可的作品，修改和更大的作品能够以不同的许可协议分发，并且可以不提供源代码。</td><td>Apache软件基金会</td><td>不授予商标权</td><td>Apache Kafka</td></tr><tr><td align="center">GPL</td><td>代码的开源&#x2F;免费使用和引用&#x2F;修改&#x2F;衍生代码的开源&#x2F;免费使用</td><td>自由软件基金会</td><td>不允许修改后和衍生的代码做为闭源的商业软件发布和销售</td><td>Linux</td></tr></tbody></table><h3 id="BSD-2-Clause"><a href="#BSD-2-Clause" class="headerlink" title="BSD 2-Clause"></a>BSD 2-Clause</h3><blockquote><p>1 . 如果再发布的产品中包含源代码，则在源代码中必须带有原来代码中的BSD协议；<br>2 . 如果再发布的只是二进制类库&#x2F;软件，则需要在类库&#x2F;软件的文档那个和版权声明中包含原来代码中的BSD协议；    </p></blockquote><h3 id="BSD-3-Clause"><a href="#BSD-3-Clause" class="headerlink" title="BSD 3-Clause"></a>BSD 3-Clause</h3><blockquote><p>3 . 不可以用开源代码的“作者&#x2F;机构的名字”或“原来产品的名字”做市场推广。</p></blockquote><h3 id="ISC许可协议的样版"><a href="#ISC许可协议的样版" class="headerlink" title="ISC许可协议的样版"></a>ISC许可协议的样版</h3><pre><code class="hljs">Copyright (c) 4-digit year, Company or Person&#39;s Name &lt;E-mail address&gt;Permission to use, copy, modify, and distribute this software for anypurpose with or without fee is hereby granted, provided that the abovecopyright notice and this permission notice appear in all copies.THE SOFTWARE IS PROVIDED &quot;AS IS&quot; AND THE AUTHOR DISCLAIMS ALL WARRANTIESWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OFMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FORANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGESWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN ANACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OFOR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</code></pre><h3 id="MIT许可协议的样版"><a href="#MIT许可协议的样版" class="headerlink" title="MIT许可协议的样版"></a>MIT许可协议的样版</h3><pre><code class="hljs">MIT LicenseCopyright (c) [year] [fullname]Permission is hereby granted, free of charge, to any person obtaining a copyof this software and associated documentation files (the &quot;Software&quot;), to dealin the Software without restriction, including without limitation the rightsto use, copy, modify, merge, publish, distribute, sublicense, and/or sellcopies of the Software, and to permit persons to whom the Software isfurnished to do so, subject to the following conditions:The above copyright notice and this permission notice shall be included in allcopies or substantial portions of the Software.THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS ORIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THEAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THESOFTWARE.</code></pre><h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="https://choosealicense.rustwiki.org/licenses/mit/" title="MIT">MIT许可</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>镁锌铁钾钠维D</title>
     <link href="/2024/10/25/%E9%95%81%E9%94%8C%E9%93%81%E9%92%BE%E9%92%A0%E7%BB%B4D/"/>
     <url>/2024/10/25/%E9%95%81%E9%94%8C%E9%93%81%E9%92%BE%E9%92%A0%E7%BB%B4D/</url>
     
     <content type="html"><![CDATA[<p><img src="https://img.xfiled.one/blog/avocado.svg" alt="Avocado"></p><h3 id="生活小技巧"><a href="#生活小技巧" class="headerlink" title="生活小技巧"></a>生活小技巧</h3><table><thead><tr><th align="center">问题</th><th>元素</th><th>吃什么</th></tr></thead><tbody><tr><td align="center">无法睡觉</td><td>Magnesium镁</td><td>可以吃牛油果Avocado</td></tr><tr><td align="center">能量低</td><td>Iron铁</td><td>吃一些葡萄干Raisins</td></tr><tr><td align="center">感觉虚弱</td><td>Zinc锌</td><td>吃一些黑巧克力Dark chocolate</td></tr><tr><td align="center">经常感觉累</td><td>Patassium钾</td><td>喝一些椰子水Coconut water</td></tr><tr><td align="center">头疼</td><td>Sodium钠</td><td>粉色喜马拉雅盐水Drink some water with Pink Himalayan Salt</td></tr><tr><td align="center">感到悲伤</td><td>Vitamin D维D</td><td>晒晒太阳Get some sunlight</td></tr></tbody></table>]]></content>
     
+    
+    <categories>
+      
+      <category>health</category>
+      
+    </categories>
     
     
   </entry>

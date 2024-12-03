@@ -1,0 +1,683 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Chuan">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="安装 Hysteria2 服务端更新系统12apt update -yapt install curl sudo -y  使用官方脚本安装1bash &lt;(curl -fsSL https:&#x2F;&#x2F;get.hy2.sh&#x2F;)  返回 12345678910111213141516Checking for installed version ... v2.5.2Checking for latest">
+<meta property="og:type" content="article">
+<meta property="og:title" content="华硕AC1700安装hysteria2">
+<meta property="og:url" content="http://blog.xhashao.top/2024/12/02/%E5%8D%8E%E7%A1%95AC1700%E5%AE%89%E8%A3%85hysteria2/index.html">
+<meta property="og:site_name" content="让子单飞">
+<meta property="og:description" content="安装 Hysteria2 服务端更新系统12apt update -yapt install curl sudo -y  使用官方脚本安装1bash &lt;(curl -fsSL https:&#x2F;&#x2F;get.hy2.sh&#x2F;)  返回 12345678910111213141516Checking for installed version ... v2.5.2Checking for latest">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.xhashao.top/blog/hy2.svg">
+<meta property="article:published_time" content="2024-12-02T13:19:33.000Z">
+<meta property="article:modified_time" content="2024-12-03T09:28:19.864Z">
+<meta property="article:author" content="Chuan">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.xhashao.top/blog/hy2.svg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>华硕AC1700安装hysteria2 - 让子单飞</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.xhashao.top","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>让子弹飞</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/health/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>Health</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="华硕AC1700安装hysteria2"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-12-02 21:19" pubdate>
+          2024年12月2日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          985 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          9 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">华硕AC1700安装hysteria2</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="安装-Hysteria2-服务端"><a href="#安装-Hysteria2-服务端" class="headerlink" title="安装 Hysteria2 服务端"></a>安装 Hysteria2 服务端</h1><h2 id="更新系统"><a href="#更新系统" class="headerlink" title="更新系统"></a>更新系统</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css">apt update -<span class="hljs-attribute">y</span><br>apt install curl sudo -<span class="hljs-attribute">y</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="使用官方脚本安装"><a href="#使用官方脚本安装" class="headerlink" title="使用官方脚本安装"></a>使用官方脚本安装</h2><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs lisp">bash &lt;(<span class="hljs-name">curl</span> -fsSL https<span class="hljs-symbol">://get</span>.hy2.sh/)<br></code></pre></td></tr></table></figure>
+
+<p>返回</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash">Checking <span class="hljs-keyword">for</span> installed version ... v2.5.2<br>Checking <span class="hljs-keyword">for</span> latest version ... v2.6.0<br>Downloading hysteria binary: https://github.com/apernet/hysteria/releases/download/app/v2.6.0/hysteria-linux-amd64 ...<br>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>                                 Dload  Upload   Total   Spent    Left  Speed<br>  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0<br>100 17.8M  100 17.8M    0     0  27.7M      0 --:--:-- --:--:-- --:--:--  110M<br>Installing hysteria executable ... ok<br>Install /etc/hysteria/config.yaml ... exists<br>Install /etc/systemd/system/hysteria-server.service ... ok<br>Install /etc/systemd/system/hysteria-server@.service ... ok<br>Restarting running service ...<br><br>Hysteria has been successfully update to v2.6.0.<br><br>Check out the latest changelog https://github.com/apernet/hysteria/blob/master/CHANGELOG.md<br></code></pre></td></tr></table></figure>
+
+<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><p>vi &#x2F;etc&#x2F;hysteria&#x2F;config.yaml 或 nano &#x2F;etc&#x2F;hysteria&#x2F;config.yaml</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">listen:</span> <span class="hljs-string">:8443</span><br><br><span class="hljs-comment">#acme:</span><br><span class="hljs-comment">#  domains:</span><br><span class="hljs-comment">#    - your.domain.net</span><br><span class="hljs-comment">#  email: your@email.com</span><br><br><span class="hljs-attr">auth:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">password</span><br>  <span class="hljs-attr">password:</span> <span class="hljs-string">ow123568</span><br><br><span class="hljs-attr">tls:</span><br>  <span class="hljs-attr">cert:</span> <span class="hljs-string">/root/cert/your.domain.cer</span><br>  <span class="hljs-attr">key:</span> <span class="hljs-string">/root/cert/your.domain.key</span><br><br><span class="hljs-attr">resolver:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">udp</span><br>  <span class="hljs-attr">tcp:</span><br>    <span class="hljs-attr">addr:</span> <span class="hljs-number">8.8</span><span class="hljs-number">.8</span><span class="hljs-number">.8</span><span class="hljs-string">:53</span><br>    <span class="hljs-attr">timeout:</span> <span class="hljs-string">4s</span><br>  <span class="hljs-attr">udp:</span><br>    <span class="hljs-attr">addr:</span> <span class="hljs-number">8.8</span><span class="hljs-number">.4</span><span class="hljs-number">.4</span><span class="hljs-string">:53</span><br>    <span class="hljs-attr">timeout:</span> <span class="hljs-string">4s</span><br>  <span class="hljs-attr">tls:</span><br>    <span class="hljs-attr">addr:</span> <span class="hljs-number">1.1</span><span class="hljs-number">.1</span><span class="hljs-number">.1</span><span class="hljs-string">:853</span><br>    <span class="hljs-attr">timeout:</span> <span class="hljs-string">10s</span><br>    <span class="hljs-attr">sni:</span> <span class="hljs-string">cloudflare-dns.com</span><br>    <span class="hljs-attr">insecure:</span> <span class="hljs-literal">false</span><br>  <span class="hljs-attr">https:</span><br>    <span class="hljs-attr">addr:</span> <span class="hljs-number">1.1</span><span class="hljs-number">.1</span><span class="hljs-number">.1</span><span class="hljs-string">:443</span><br>    <span class="hljs-attr">timeout:</span> <span class="hljs-string">10s</span><br>    <span class="hljs-attr">sni:</span> <span class="hljs-string">cloudflare-dns.com</span><br>    <span class="hljs-attr">insecure:</span> <span class="hljs-literal">false</span><br><br><span class="hljs-attr">masquerade:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">proxy</span><br>  <span class="hljs-attr">proxy:</span><br>    <span class="hljs-attr">url:</span> <span class="hljs-string">https://your.domain.net/</span><br>    <span class="hljs-attr">rewriteHost:</span> <span class="hljs-literal">true</span><br><br></code></pre></td></tr></table></figure>
+
+<h2 id="自动启动"><a href="#自动启动" class="headerlink" title="自动启动"></a>自动启动</h2><figure class="highlight nsis"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs nsis"><span class="hljs-params">system</span>ctl start hysteria-server.service    <span class="hljs-comment"># 启动 hysteria 服务</span><br><span class="hljs-params">system</span>ctl enable hysteria-server.service   <span class="hljs-comment"># 设置 hysteria 服务 开机自启</span><br><span class="hljs-params">system</span>ctl daemon-reload<br><span class="hljs-params">system</span>ctl restart hysteria-server.service  <span class="hljs-comment"># 重启 hysteria 服务</span><br><span class="hljs-params">system</span>ctl stop hysteria-server.service     <span class="hljs-comment"># 停止 hysteria 服务</span><br><span class="hljs-params">system</span>ctl status hysteria-server.service   <span class="hljs-comment"># 查看 hysteria 服务 状态</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="报错无法启动"><a href="#报错无法启动" class="headerlink" title="报错无法启动"></a>报错无法启动</h2><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-built_in">Warning</span>: The unit file, source <span class="hljs-keyword">configuration</span> file <span class="hljs-keyword">or</span> <span class="hljs-keyword">drop</span>-ins <span class="hljs-keyword">of</span> hysteria-<span class="hljs-keyword">server</span>.service changed <span class="hljs-keyword">on</span> disk. Run <span class="hljs-string">&#x27;systemctl daemon-reload&#x27;</span> <span class="hljs-keyword">to</span> r&gt;<br>● hysteria-<span class="hljs-keyword">server</span>.service - Hysteria <span class="hljs-keyword">Server</span> Service (config.yaml)<br>     Loaded: loaded (/etc/systemd/<span class="hljs-keyword">system</span>/hysteria-<span class="hljs-keyword">server</span>.service; disabled; vendor preset: enabled)<br>     Active: failed (Result: <span class="hljs-keyword">exit</span>-code) since Tue <span class="hljs-number">2024</span><span class="hljs-number">-12</span><span class="hljs-number">-03</span> <span class="hljs-number">08</span>:<span class="hljs-number">22</span>:<span class="hljs-number">48</span> CET; <span class="hljs-number">3</span>min <span class="hljs-number">8</span>s ago<br>    Process: <span class="hljs-number">3524291</span> ExecStart=/usr/<span class="hljs-keyword">local</span>/bin/hysteria <span class="hljs-keyword">server</span> <span class="hljs-comment">--config /etc/hysteria/config.yaml (code=exited, status=1/FAILURE)</span><br>   Main PID: <span class="hljs-number">3524291</span> (code=exited, status=<span class="hljs-number">1</span>/FAILURE)<br><br><span class="hljs-type">Dec</span> <span class="hljs-number">03</span> <span class="hljs-number">08</span>:<span class="hljs-number">22</span>:<span class="hljs-number">47</span> vps32456491.hosteons.com systemd[<span class="hljs-number">1</span>]: Started Hysteria <span class="hljs-keyword">Server</span> Service (config.yaml).<br><span class="hljs-type">Dec</span> <span class="hljs-number">03</span> <span class="hljs-number">08</span>:<span class="hljs-number">22</span>:<span class="hljs-number">48</span> vps32456491.hosteons.com hysteria[<span class="hljs-number">3524291</span>]: <span class="hljs-number">2024</span><span class="hljs-number">-12</span><span class="hljs-number">-03</span>T08:<span class="hljs-number">22</span>:<span class="hljs-number">48</span>+<span class="hljs-number">01</span>:<span class="hljs-number">00</span>        <span class="hljs-keyword">INFO</span>        <span class="hljs-keyword">server</span> mode<br><span class="hljs-type">Dec</span> <span class="hljs-number">03</span> <span class="hljs-number">08</span>:<span class="hljs-number">22</span>:<span class="hljs-number">48</span> vps32456491.hosteons.com hysteria[<span class="hljs-number">3524291</span>]: <span class="hljs-number">2024</span><span class="hljs-number">-12</span><span class="hljs-number">-03</span>T08:<span class="hljs-number">22</span>:<span class="hljs-number">48</span>+<span class="hljs-number">01</span>:<span class="hljs-number">00</span>        FATAL        failed <span class="hljs-keyword">to</span> <span class="hljs-keyword">load</span> <span class="hljs-keyword">server</span> config      &gt;<br><span class="hljs-type">Dec</span> <span class="hljs-number">03</span> <span class="hljs-number">08</span>:<span class="hljs-number">22</span>:<span class="hljs-number">48</span> vps32456491.hosteons.com systemd[<span class="hljs-number">1</span>]: hysteria-<span class="hljs-keyword">server</span>.service: Main process exited, code=exited, status=<span class="hljs-number">1</span>/FAILURE<br><span class="hljs-type">Dec</span> <span class="hljs-number">03</span> <span class="hljs-number">08</span>:<span class="hljs-number">22</span>:<span class="hljs-number">48</span> vps32456491.hosteons.com systemd[<span class="hljs-number">1</span>]: hysteria-<span class="hljs-keyword">server</span>.service: Failed <span class="hljs-keyword">with</span> result <span class="hljs-string">&#x27;exit-code&#x27;</span>.<br></code></pre></td></tr></table></figure>
+
+<p>执行</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">sed -i <span class="hljs-string">&#x27;/User=/d&#x27;</span> <span class="hljs-regexp">/etc/</span>systemd<span class="hljs-regexp">/system/</span>hysteria-server.service<br>sed -i <span class="hljs-string">&#x27;/User=/d&#x27;</span> <span class="hljs-regexp">/etc/</span>systemd<span class="hljs-regexp">/system/</span>hysteria-server@.service<br></code></pre></td></tr></table></figure>
+
+<h2 id="检测是否启动进程"><a href="#检测是否启动进程" class="headerlink" title="检测是否启动进程"></a>检测是否启动进程</h2><p>netstat -nlp | grep 8443</p>
+<h2 id="sing-box配置"><a href="#sing-box配置" class="headerlink" title="sing-box配置"></a>sing-box配置</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;log&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;level&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;error&quot;</span><br>  <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;dns&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;servers&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>      <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;tag&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;google&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;address&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;tls://dns.google&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;address_resolver&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;resolver&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;strategy&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;ipv4_only&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;detour&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;select&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;tag&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;tencent&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;address&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;tls://dot.pub&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;address_resolver&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;resolver&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;strategy&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;ipv4_only&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;detour&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;direct&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;tag&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;resolver&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;address&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;223.5.5.5&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;strategy&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;ipv4_only&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;detour&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;direct&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><br>    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;rules&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>      <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;outbound&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;any&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;server&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;tencent&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;clash_mode&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;direct&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;server&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;tencent&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;clash_mode&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;global&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;server&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;google&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><br>    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;final&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;google&quot;</span><br>  <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;inbounds&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;tun&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;tag&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;tun-in&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;auto_route&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;sniff&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;inet4_address&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;172.19.0.1/30&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;inet6_address&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;fdfe:dcba:9876::1/126&quot;</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;outbounds&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;selector&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;tag&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;select&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;outbounds&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>        <span class="hljs-string">&quot;proxy&quot;</span><br>      <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;default&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;proxy&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;interrupt_exist_connections&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;hysteria2&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;tag&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;proxy&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;server&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;your.domain.net&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;server_port&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8443</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;up_mbps&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">20</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;down_mbps&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;password&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;password&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;tls&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;server_name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;your.domain.net&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;insecure&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><br>      <span class="hljs-punctuation">&#125;</span><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;direct&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;tag&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;direct&quot;</span><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;block&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;tag&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;block&quot;</span><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;dns&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;tag&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;dns-out&quot;</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;route&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;rules&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>      <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;protocol&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;dns&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;outbound&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;dns-out&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;clash_mode&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;global&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;outbound&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;select&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><br>    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;auto_detect_interface&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><br>  <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="下载Hysteria客户端文件linux版本"><a href="#下载Hysteria客户端文件linux版本" class="headerlink" title="下载Hysteria客户端文件linux版本"></a>下载Hysteria客户端文件linux版本</h2><p><a target="_blank" rel="noopener" href="https://github.com/apernet/hysteria/releases">https://github.com/apernet/hysteria/releases</a><br>此处因为AC1700为armv5，所以下载hysteria-linux-armv5<br><a target="_blank" rel="noopener" href="https://github.com/apernet/hysteria/releases/download/app%2Fv2.6.0/hysteria-linux-armv5">https://github.com/apernet/hysteria/releases/download/app%2Fv2.6.0/hysteria-linux-armv5</a><br>截至2024年12月，最新版本为2.6.0，大约16.8MB，意味着jffs分区要不小于17MB。<br>下载到&#x2F;jffs&#x2F;hy2目录</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">server:</span> <span class="hljs-string">your.domain.net:8443</span><br><span class="hljs-attr">auth:</span> <span class="hljs-string">password</span><br><br><span class="hljs-attr">tls:</span><br>  <span class="hljs-attr">sni:</span> <span class="hljs-string">your.domain.net</span><br>  <span class="hljs-attr">insecure:</span> <span class="hljs-literal">true</span><br><br><span class="hljs-attr">socks5:</span><br>  <span class="hljs-attr">listen:</span> <span class="hljs-string">:7893</span><br><br><span class="hljs-comment">#http:</span><br><span class="hljs-comment">#  listen: 127.0.0.1:7895</span><br><span class="hljs-comment">#tcpTProxy:</span><br><span class="hljs-comment">#  listen: :2500</span><br><br><span class="hljs-comment">#tcpRedirect:</span><br><span class="hljs-comment">#  listen: :7892</span><br><br><span class="hljs-comment">#udpTProxy:</span><br><span class="hljs-comment">#  listen: :2500</span><br><span class="hljs-comment">#  timeout: 20s</span><br><br><span class="hljs-attr">resolver:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">udp</span><br>  <span class="hljs-attr">udp:</span><br>    <span class="hljs-attr">addr:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.50</span><span class="hljs-number">.1</span><span class="hljs-string">:5388</span> <span class="hljs-comment">#DNS IP</span><br>    <span class="hljs-attr">timeout:</span> <span class="hljs-string">4s</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="测试运行"><a href="#测试运行" class="headerlink" title="测试运行"></a>测试运行</h2><p>cd &#x2F;jffs&#x2F;hy2<br>.&#x2F;hysteria client -c &#x2F;jffs&#x2F;hy2&#x2F;config.yaml –log-level debug</p>
+<h2 id="后台运行"><a href="#后台运行" class="headerlink" title="后台运行"></a>后台运行</h2><p>nohup &#x2F;jffs&#x2F;hy2&#x2F;hysteria &gt;&#x2F;dev&#x2F;null 2&gt;&amp;1 &amp;<br>netstat -nlp | grep 7893</p>
+<h2 id="配置到Clash中"><a href="#配置到Clash中" class="headerlink" title="配置到Clash中"></a>配置到Clash中</h2><p>在这篇文章里，<a href="/2024/12/02/%E5%8D%8E%E7%A1%95RT-ACRH17%E8%B7%AF%E7%94%B1%E5%99%A8%E9%85%8D%E7%BD%AE/#%E6%B7%BB%E5%8A%A0%E9%85%8D%E7%BD%AE">华硕RT-ACRH17路由器配置</a></p>
+<p>proxies加入hy2的节点，内部走sock5</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">proxies</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;hy2&quot;</span><br>    <span class="hljs-attr">type:</span> <span class="hljs-string">socks5</span><br>    <span class="hljs-attr">server:</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span><br>    <span class="hljs-attr">port:</span> <span class="hljs-string">&quot;7893&quot;</span><br></code></pre></td></tr></table></figure>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>华硕AC1700安装hysteria2</div>
+      <div>http://blog.xhashao.top/2024/12/02/华硕AC1700安装hysteria2/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Chuan</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年12月2日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/12/02/%E5%8D%8E%E7%A1%95RT-ACRH17%E8%B7%AF%E7%94%B1%E5%99%A8%E9%85%8D%E7%BD%AE/" title="华硕RT-ACRH17路由器配置">
+                        <span class="hidden-mobile">华硕RT-ACRH17路由器配置</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       © 2024 <a href="/about" target="_blank" rel="nofollow noopener">Chuan</a> <i class="iconfont icon-love"></i> Powered by <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> & <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
